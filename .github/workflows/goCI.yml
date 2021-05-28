@@ -1,0 +1,21 @@
+name: CI setup for Go
+
+# Trigger workflow when code is pushed or pull request on main branch in a repository
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches:
+      - main
+    
+jobs:
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      run: |
+        ls
+        echo Hello there!
+    
+    
