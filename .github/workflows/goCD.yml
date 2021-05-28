@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  create:
+    tags:
+      - v*
+      
+jobs:
+  release:
+    name: Release on Github
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out codes
+        uses: action/checkout@v2
